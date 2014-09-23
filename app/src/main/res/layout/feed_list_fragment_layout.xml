@@ -1,0 +1,61 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#313131"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:saveEnabled="false"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/hottest_title_text_view"
+                android:layout_width="fill_parent"
+                android:gravity="center|center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#414141"
+                android:textColor="#f0720b"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal|right"
+                android:id="@+id/feed_load_progress_bar" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/refresh_feed_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:text="@string/refresh_string" />
+
+        <ListView
+            android:id="@+id/feed_list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fastScrollEnabled="true"
+            android:scrollbarFadeDuration="10000"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+
+
+</FrameLayout>
